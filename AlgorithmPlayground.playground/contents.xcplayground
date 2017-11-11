@@ -4,5 +4,6 @@
         <page name='简介'/>
         <page name='二分法'/>
         <page name='选择排序'/>
+        <page name='递归(栈)'/>
     </pages>
 </playground>
