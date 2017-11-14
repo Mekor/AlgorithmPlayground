@@ -6,6 +6,7 @@
         <page name='选择排序'/>
         <page name='递归(栈)'/>
         <page name='快速排序'/>
-        <page name='散列函数'/>
+        <page name='散列函数(字典)'/>
+        <page name='广度优先搜索'/>
     </pages>
 </playground>
