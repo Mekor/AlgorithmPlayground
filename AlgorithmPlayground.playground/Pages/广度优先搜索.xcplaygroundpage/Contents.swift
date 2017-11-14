@@ -13,6 +13,9 @@ import Foundation
 var graph:[String: [String]] = [:]
 var queue:[String] = []
 
+/// 记录已经搜过的人: 为了解决我的朋友是你,你的朋友是我 这种循环
+var searched:[String] = []
+
 graph["you"] = ["alice", "bob", "claire"]
 graph["bob"] = ["anuj", "peggy"]
 graph["alice"] = ["peggy"]
@@ -44,10 +47,16 @@ func personIsSeller(with name: String) -> Bool {
 func containSeller() -> Bool {
     while queue.count > 0 {
         let person = pop(with: &queue)
+        
+        if searched.contains(person) {
+            print("已经包含\(person)就不再搜索")
+            continue
+        }
         if personIsSeller(with: person) {
             print(person, "is a mango seller!")
             return true
         }else {
+            searched.append(person)
             let value = graph[person] ?? []
             queue += value
         }
