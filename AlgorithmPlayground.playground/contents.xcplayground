@@ -8,5 +8,6 @@
         <page name='快速排序'/>
         <page name='散列函数(字典)'/>
         <page name='广度优先搜索'/>
+        <page name='迪克斯特拉算法'/>
     </pages>
 </playground>
