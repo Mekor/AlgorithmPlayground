@@ -11,5 +11,29 @@ import Foundation
 
 // 感觉这段代码用OC写比较合适...swift我要看下
 
+var graph: Dictionary = [String: Any]()
+graph["you"] = ["alice", "bob", "claire"]
+
+
+var start = [String: Int]()
+start["a"] = 6
+start["b"] = 2
+graph["start"] = start
+
+
+var a = [String: Int]()
+a["fin"] = 1
+var b = [String: Int]()
+b["a"] = 3
+b["fin"] = 5
+
+graph["a"] = a
+graph["b"] = b
+graph["fin"] = [String: Int]()
+
+
+
+
+
 
 //: [Next](@next)
